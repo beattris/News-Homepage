@@ -1,0 +1,35 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 0 100px;
+  @include small {
+    padding: 0 20px;
+  }
+  &__logo {
+    .logo {
+      width: 50px;
+    }
+  }
+  &__links {
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        margin: 0 8px;
+        a {
+            color: $dark-grayish-blue;
+            font-weight: 500;
+        }
+      }
+    }
+  }
+}
