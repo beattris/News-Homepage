@@ -25,7 +25,46 @@
       li {
         display: inline-block;
         margin: 0 8px;
+        &.hideOnMobile{
+          @include small{
+            display: none;
+          }
+        }
+        &.hideOnDesktop{
+          @include medium{
+            display: none;
+          }
+        }
         a {
+            color: $dark-grayish-blue;
+            font-weight: 500;
+        }
+      }
+    }
+  }
+  &__links--mobile{
+    ul {
+      list-style-type: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 70%;
+      z-index: 999;
+      background-color: white;
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      // display: none;
+      li {
+        width: 100%;
+        margin: 20px 0 30px 30px;
+        display: inline-block;
+        // &.closeIcon{
+        //   margin-left: auto;
+        // }
+        a {
+          width: 100%;
             color: $dark-grayish-blue;
             font-weight: 500;
         }

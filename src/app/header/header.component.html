@@ -3,13 +3,24 @@
     <div class="nav__logo">
         <a href="#"><img class="logo" src="../../assets/images/logo.svg" alt="Logo"></a>
     </div>
-    <div class="nav__links">
+    <div class="nav__links--mobile" [style]="sidebarIsHidden">
         <ul>
+            <li class="closeIcon" (click)="hideSidebar()"><a href="#"><img src="../../assets/images/icon-menu-close.svg" alt="close-menu"></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">New</a></li>
             <li><a href="#">Popular</a></li>
             <li><a href="#">Trending</a></li>
             <li><a href="#">Categories</a></li>
+        </ul>
+    </div>
+    <div class="nav__links">
+        <ul>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">New</a></li>
+            <li class="hideOnMobile"><a href="#">Popular</a></li>
+            <li class="hideOnMobile"><a href="#">Trending</a></li>
+            <li class="hideOnMobile"><a href="#">Categories</a></li>
+            <li class="hideOnDesktop" (click)="showSidebar()"><a href="#"><img src="../../assets/images/icon-menu.svg" alt=""></a></li>
         </ul>
     </div>
   </nav>
