@@ -2,20 +2,20 @@
 @import "../../variables.scss";
 
 .hero-section {
-    margin: 0 15px;
-    @include medium {
-        margin: 0 50px;
-    }
-    @include large {
-        margin: 0 70px;
-    }
-    @include xlarge {
-        margin: 0 100px;
-    }
+  margin: 0 15px;
+  @include medium {
+    margin: 0 50px;
+  }
+  @include large {
+    margin: 0 70px;
+  }
+  @include xlarge {
+    margin: 0 100px;
+  }
   &__wrapper {
     max-width: 100%;
-    @include medium{
-        display: flex;
+    @include medium {
+      display: flex;
     }
     &--image {
       background-image: url("../../assets/images/image-web-3-mobile.jpg");
@@ -23,66 +23,86 @@
       background-repeat: no-repeat;
       height: 400px;
       width: 100%;
-      @include medium{
-      background-image: url("../../assets/images/image-web-3-desktop.jpg");
-      background-position: center;
-      height: 300px;
-      width: 100%;
+      @include medium {
+        background-image: url("../../assets/images/image-web-3-desktop.jpg");
+        background-position: center;
+        height: 300px;
+        width: 100%;
       }
     }
-    &--left{
-        h1{
-            font-weight: 800;
-            font-size: 30px;
-            margin-top: 13px;
-        }
+    &--left-container {
+      @include medium {
+        max-width: 60%;
+        margin-right: 10px;
+      }
+    }
+    &--left {
+      h1 {
+        font-weight: 800;
+        font-size: 30px;
+        margin-top: 13px;
         @include medium {
-            display: flex;
-        }
+            font-size: 37px;
+            margin-right: 0;
+          }
+        @include ldesktop {
+            line-height: 3rem;
+          }
+      }
+      @include medium {
+        display: flex;
+        justify-content: space-between;
+      }
     }
-    &--left-text{
-        p{
-            margin-top: 15px;
-            line-height: 1.8rem;
-            color: $dark-grayish-blue;
-            font-weight: 400;
-        }
-        a{
-            margin-top: 20px;
-            display: inline-block;
-            outline: none;
-            padding: 15px 23px;
-            background-color: $soft-red;
-            color: $off-white;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 3px;
-            font-size: 15px;
-        }
+    &--left-text {
+        @include medium {
+            margin: 0 10px 0 50px;
+          }
+      p {
+        margin-top: 15px;
+        line-height: 1.8rem;
+        color: $dark-grayish-blue;
+        font-weight: 400;
+      }
+      a {
+        margin-top: 20px;
+        display: inline-block;
+        outline: none;
+        padding: 15px 23px;
+        background-color: $soft-red;
+        color: $off-white;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+        font-size: 15px;
+      }
     }
-    &--right{
-        background-color: $very-dark-blue;
-        margin-top: 50px;
-        padding: 15px 12px;
-        @include medium{
-            margin-top: 0;
-        }
-        h2{
-            color: $soft-orange;
-            padding-top: 10px;
-        }
-        h3{
-            color: white;
-            padding-top: 25px;
-        }
-        p{
-            color: $grayish-blue;
-            padding-top: 20px;
-            line-height: 1.8rem;
-        }
-        hr{
-            margin-top: 20px;
-        }
+    &--right {
+      background-color: $very-dark-blue;
+      margin-top: 50px;
+      padding: 15px 12px;
+      @include medium {
+        margin-top: 0;
+      }
+      @include large {
+        padding: 20px 12px 60px 12px;
+      }
+      h2 {
+        color: $soft-orange;
+        padding-top: 10px;
+      }
+      h3 {
+        color: white;
+        padding-top: 25px;
+      }
+      p {
+        color: $grayish-blue;
+        padding-top: 20px;
+        line-height: 1.8rem;
+      }
+      hr {
+        margin-top: 20px;
+      }
     }
   }
 }
