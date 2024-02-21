@@ -4,15 +4,22 @@
 .nav {
   height: 50px;
   width: 100%;
-  background-color: transparent;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  vertical-align: middle;
   margin: 20px 0;
   padding: 0 100px;
+  @include medium {
+    padding: 0 50px;
+  }
   @include small {
-    padding: 0 20px;
+    padding: 0 15px;
+  }
+  @include xlarge{
+    padding: 0 100px;
   }
   &__logo {
     .logo {
@@ -38,6 +45,7 @@
         a {
           color: $dark-grayish-blue;
           font-weight: 700;
+          outline: none;
         }
       }
     }
@@ -56,7 +64,7 @@
       padding-top: 30px;
       // display: none;
       li {
-        width: 100%;
+        // width: 100%;
         margin: 0 0 40px 30px;
         // display: inline-block;
         &.closeIcon {
@@ -64,9 +72,9 @@
           padding-bottom: 50px;
         }
         a {
-          width: 100%;
           color: $dark-grayish-blue;
           font-weight: 700;
+          outline: none;
         }
       }
     }

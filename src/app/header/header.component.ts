@@ -6,7 +6,7 @@ import { Component, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  sidebarIsHidden = 'display: block';
+  sidebarIsHidden = 'display: none';
 
   showSidebar() {
     this.sidebarIsHidden = 'display: block';

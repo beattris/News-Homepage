@@ -13,7 +13,8 @@ html {
 
 body {
     width: 100%;
-    // max-width: 800px;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -23,9 +24,11 @@ h1, h2, h3, h4 {
 
 p {
     margin-top: 0;
+    font-size: 15px !important;
 }
 
 a, a:visited, a:active {
     text-decoration: none;
+    outline: none;
 }
 
